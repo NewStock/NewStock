@@ -1,3 +1,3 @@
 # NewStock
 
-![Webpage Screenshot](http://i.imgur.com/6JvE0St.png)
+![Webpage Screenshot](http://i.imgur.com/fiegSMI.png)
