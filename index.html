@@ -8,6 +8,11 @@
     <!-- CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+
+    <!--JS Libs-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,13 +25,13 @@
                 <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
             <div class="col s8">
-                <!--<form>
+                <form>
                     <div class="input-field">
                         <input id="search" type="search" required>
                         <label for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
+                        <i id="closebutton" class="material-icons">close</i>
                     </div>
-                </form>-->
+                </form>
             </div>
             <div class="col s2">
                 <ul class="right hide-on-med-and-down">
@@ -41,6 +46,12 @@
         </div>
     </div>
 </nav>
+
+<script>
+    $("#closebutton").click(function(){
+        document.getElementById("search").value="";
+    });
+</script>
 
 <div class="container">
     <h1 class="center-align">Welcome to NewStock!</h1>
@@ -69,7 +80,7 @@
 	  "locale": "en",
 	  "toolbar_bg": "#f1f3f6",
 	  "enable_publishing": false,
-	  "allow_symbol_change": true,
+	  "allow_symbol_change": false,
 	  "hideideas": true
 	});
 	</script>
