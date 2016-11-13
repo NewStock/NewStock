@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#stockName').html(stockName);
 
     updateFunc = function(){
-    $.ajax({url: "http://finance.yahoo.com/d/quotes.csv?s="+stockName+"&f=napc8ohgj1vj2mkj", success: function(data)
+    $.ajax({url: "https://crossorigin.me/http://finance.yahoo.com/d/quotes.csv?s="+stockName+"&f=napc8ohgj1vj2mkj", success: function(data)
     {
         data = CSVtoArray(data);
         console.log(data);
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
     updateFunc();
 
-    setInterval(updateFunc, 6000*10);
+    setInterval(updateFunc, 1000*10);
 
     });
 // setInterval(function()
