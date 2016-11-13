@@ -2,9 +2,9 @@ input[type="search"] {
     height: 64px !important;
 }
 
-.btn {
+/*.btn {
     margin: 20px 0 20px 0 !important;
-}
+}*/
 
 body {
     display: flex;
