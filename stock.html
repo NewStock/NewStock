@@ -18,12 +18,15 @@
     <!--  Scripts-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/xml2json.min.js"></script>
+
     <script type="text/javascript" src="js/init.js"></script>
     <script>var stockName = findGetParameter("stock").toUpperCase();</script>
 
     <script type="text/javascript" src="js/code.js"></script>
     <script type="text/javascript" src="js/stock.js"></script>
     <script type="text/javascript" src="js/twitterfeed.js"></script>
+    <script type="text/javascript" src="js/newsfeed.js"></script>
 </head>
 
 <body>
@@ -335,42 +338,8 @@
                 <div class="col s12 l5 left">
                     <div class="section">
                         <h5>News</h5>
-                        <div class="collection">
-                            <a href="#" class="collection-item avatar">
-                                <i class="material-icons circle blue">folder</i>
-                                <span class="title">Title</span>
-                                <p>Website Name <br>
-                                    Article Date
-                                </p>
-                            </a>
-                            <a href="#" class="collection-item avatar">
-                                <i class="material-icons circle yellow">folder</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                    Second Line
-                                </p>
-                            </a>
-                            <a href="#" class="collection-item avatar">
-                                <i class="material-icons circle green">folder</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                    Second Line
-                                </p>
-                            </a>
-                            <a href="#" class="collection-item avatar">
-                                <i class="material-icons circle red">folder</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                    Second Line
-                                </p>
-                            </a>
-                            <a href="#" class="collection-item avatar">
-                                <i class="material-icons circle black">folder</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                    Second Line
-                                </p>
-                            </a>
+                        <div id="newsCollection" class="collection">
+                            
                         </div>
                     </div>
                 </div>
