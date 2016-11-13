@@ -25,6 +25,9 @@ $(document).ready(function() {
         var high52 = data[11];
         var low52 = data[12];
 
+        //Turns out it's not real...
+        if (price == "N/A") window.location.href = '/404.html'
+
         //set page title
         document.title = stockName + ": " + name + " | NewStock";
 
