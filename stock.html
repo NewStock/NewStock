@@ -58,6 +58,15 @@
                     <li><a href="#">Sign Up</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-nav">
+                    <li>
+                        <form id="search-form-mobile">
+                            <div class="input-field">
+                                <input id="search-mobile" type="search" placeholder="Search a stock..." required>
+                                <label for="search"><i class="material-icons">search</i></label>
+                                <i id="closebutton-mobile" class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/course.html">Courses</a></li>
                     <div class="divider"></div>
@@ -72,13 +81,8 @@
 <main>
     <div class="container">
         <div class="row">
-            <h1 class="center"><span id="stockName"> AAPL</span> $<span id="price">108.73</span> <span id="diff"
-                                                                                                       class="green-text">(+ $2.95)</span>
-            </h1>
-            <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
-
-            <div class="col l2">
-                <h5>Portfolio</h5>
+            <div class="col s12 l2">
+                <h5 class="center">Portfolio</h5>
                 <div class="collection hoverable">
                     <a href="#" class="collection-item"><span class="new badge green"
                                                               data-badge-caption="">+ $2.95</span>AAPL</a>
@@ -90,33 +94,40 @@
                     <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $0.65</span>YHOO</a>
                 </div>
             </div>
-            <div class="col l10">
-                <!-- TradingView Widget BEGIN -->
-                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                <script type="text/javascript">
-                    var theWid = new TradingView.widget({
-                        "width": '100%',
-                        "height": 400,
-                        "symbol": stockName,
-                        "interval": "30",
-                        "timezone": "Etc/UTC",
-                        "theme": "White",
-                        "style": "2",
-                        "locale": "en",
-                        "toolbar_bg": "#f1f3f6",
-                        "enable_publishing": false,
-                        "hide_top_toolbar": true,
-                        "save_image": false,
-                        "allow_symbol_change": true,
-                        "hideideas": true
-                    });
-                </script>
-                <!-- TradingView Widget END -->
+            <div class="col s12 l10">
+                <h1 class="center"><span id="stockName"> AAPL</span> $<span id="price">108.73</span> <span id="diff"
+                                                                                                           class="green-text">(+ $2.95)</span>
+                </h1>
+                <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
+
+                <div class="col s12">
+                    <!-- TradingView Widget BEGIN -->
+                    <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                    <script type="text/javascript">
+                        var theWid = new TradingView.widget({
+                            "width": '100%',
+                            "height": 400,
+                            "symbol": stockName,
+                            "interval": "30",
+                            "timezone": "Etc/UTC",
+                            "theme": "White",
+                            "style": "2",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "save_image": false,
+                            "allow_symbol_change": true,
+                            "hideideas": true
+                        });
+                    </script>
+                    <!-- TradingView Widget END -->
+                </div>
 
                 <div class="col l12">
                     <h5>Statistics</h5>
                     <div class="row">
-                        <div class="col l4">
+                        <div class="col s8 l4">
                             <div class="collection">
                                 <a href="#open-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                    id="open">+ $2.95</span>
@@ -180,7 +191,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col l4">
+                        <div class="col s8 l4">
                             <div class="collection">
                                 <a href="#market-cap-help" class="collection-item"><span class="badge"
                                                                                          data-badge-caption="" id="cap">+ $2.95</span>Market
@@ -252,7 +263,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col l4">
+                        <div class="col s8 l4">
                             <div class="collection">
                                 <a href="#range-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                    id="range">+ $2.95</span>Range
@@ -327,7 +338,7 @@
                     </div>
                 </div>
 
-                <div class="col l5 left">
+                <div class="col s12 l5 left">
                     <div class="section">
                         <h5>News</h5>
                         <div class="collection">
@@ -369,7 +380,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col l5 right">
+                <div class="col s12 l5 right">
                     <div class="section">
                         <h5>Social</h5>
                         <div class="collection hoverable">
