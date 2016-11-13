@@ -5,6 +5,10 @@
     });
 })(jQuery);
 
+$(document).ready(function(){
+    $('.modal').modal();
+});
+
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];

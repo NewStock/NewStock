@@ -19,7 +19,7 @@ $(document).ready(function(){
         {
             story = stories[i];
             
-            var newsA = $('<a href="#" class="collection-item avatar"></a>')
+            var newsA = $('<a href="#" class="collection-item avatar"></a>').attr('href', story.link)
             var icon = $('<i class="fa fa-newspaper-o fa-fw circle '+colors[Math.floor(Math.random()*colors.length)]+'"></i>')
             var title = $('<span class="title"></span>')
             title.append(story.title)
