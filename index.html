@@ -10,14 +10,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/style.css">
-
-    <!--JS-->
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-
-  <script src="/js/code.js"></script>
 </head>
 
 <body>
@@ -30,7 +22,7 @@
                 <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
             <div class="col l8">
-                <form>
+                <form id="search-form">
                     <div class="input-field">
                         <input id="search" type="search" placeholder="Search a stock..." required>
                         <label for="search"><i class="material-icons">search</i></label>
@@ -114,20 +106,6 @@
         <div class="col l5 right">
             <div class="section">
                 <h5>Social</h5>
-
-                <a class="twitter-timeline" href="https://twitter.com/search?q=%24AAPL"
-                   data-widget-id="797528182249455616">Tweets about $AAPL</a>
-                <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + "://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-
-
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header">
@@ -227,5 +205,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
 </body>
 </html>
