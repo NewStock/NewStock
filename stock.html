@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NewStock</title>
 
     <!-- CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css">
 
     <!--Data-->
@@ -31,77 +32,79 @@
 
 <body>
 
-<nav class="green lighten-1" role="navigation">
-    <div class="nav-wrapper container">
-        <div class="row">
-            <div class="col l2">
-                <a href="/" class="brand-logo"><i class="material-icons">trending_up</i>NewStock</a>
-                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-            </div>
-            <div class="col l7">
-                <form id="search-form">
-                    <div class="input-field">
-                        <input id="search" type="search" class="autocomplete" autocomplete="off" placeholder="Search a stock..." required>
-                        <label for="search"><i class="material-icons">search</i></label>
-                        <i id="closebutton" class="material-icons">close</i>
-                    </div>
-                </form>
-            </div>
-            <div class="col l3">
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/course.html">Courses</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-nav">
-                    <li>
-                        <form id="search-form-mobile">
-                            <div class="input-field">
-                                <input id="search-mobile" type="search" class="autocomplete" autocomplete="off" placeholder="Search a stock..." required>
-                                <label for="search-mobile"><i class="material-icons">search</i></label>
-                                <i id="closebutton-mobile" class="material-icons">close</i>
-                            </div>
-                        </form>
-                    </li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/course.html">Courses</a></li>
-                    <div class="divider"></div>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="col s12 l2">
-                <h1 class="center">&nbsp;</h1>
-                <h5 class="center">Portfolio</h5>
-                <div class="collection hoverable">
-                    <a href="#" class="collection-item"><span class="new badge green"
-                                                              data-badge-caption="">+ $2.95</span>AAPL</a>
-                    <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $1.03</span>AMZN</a>
-                    <a href="#" class="collection-item"><span class="new badge green"
-                                                              data-badge-caption="">+ $1.73</span>TSLA</a>
-                    <a href="#" class="collection-item"><span class="new badge green"
-                                                              data-badge-caption="">+ $0.98</span>TWTR</a>
-                    <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $0.65</span>YHOO</a>
+    <nav class="green lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <div class="row">
+                <div class="col l2">
+                    <a href="/" class="brand-logo"><i class="material-icons">trending_up</i>NewStock</a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+                <div class="col l7">
+                    <form id="search-form">
+                        <div class="input-field">
+                            <input id="search" type="search" class="autocomplete" autocomplete="off" placeholder="Search a stock..." required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i id="closebutton" class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+                <div class="col l3">
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/course.html">Courses</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-nav">
+                        <li>
+                            <form id="search-form-mobile">
+                                <div class="input-field">
+                                    <input id="search-mobile" type="search" class="autocomplete" autocomplete="off" placeholder="Search a stock..." required>
+                                    <label for="search-mobile"><i class="material-icons">search</i></label>
+                                    <i id="closebutton-mobile" class="material-icons">close</i>
+                                </div>
+                            </form>
+                        </li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/course.html">Courses</a></li>
+                        <div class="divider"></div>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col s12 l10">
-                <h1 class="center"><span id="stockName"></span> $<span id="price"></span> <span id="diff" class="green-text"></span>
-                <div class="progress" id="progressBar"><div class="indeterminate"></div></div>
-                </h1>
-                
-                <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
+        </div>
+    </nav>
 
-                <div class="col s12">
-                    <!-- TradingView Widget BEGIN -->
-                    <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                    <script type="text/javascript">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l2">
+                    <h1 class="center">&nbsp;</h1>
+                    <h5 class="center">Portfolio</h5>
+                    <div class="collection hoverable">
+                        <a href="#" class="collection-item"><span class="new badge green"
+                                                              data-badge-caption="">+ $2.95</span>AAPL</a>
+                        <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $1.03</span>AMZN</a>
+                        <a href="#" class="collection-item"><span class="new badge green"
+                                                              data-badge-caption="">+ $1.73</span>TSLA</a>
+                        <a href="#" class="collection-item"><span class="new badge green"
+                                                              data-badge-caption="">+ $0.98</span>TWTR</a>
+                        <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $0.65</span>YHOO</a>
+                    </div>
+                </div>
+                <div class="col s12 l10">
+                    <h1 class="center"><span id="stockName"></span> $<span id="price"></span> <span id="diff" class="green-text"></span>
+                        <div class="progress" id="progressBar">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </h1>
+
+                    <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
+
+                    <div class="col s12">
+                        <!-- TradingView Widget BEGIN -->
+                        <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                        <script type="text/javascript">
                         var theWid = new TradingView.widget({
                             "width": '100%',
                             "height": 400,
@@ -119,292 +122,272 @@
                             "hideideas": true
                         });
                     </script>
-                    <!-- TradingView Widget END -->
-                </div>
-                <div class="col l12">
-                    <h5>Statistics</h5>
-                    <div class="row">
-                        <div class="col s12 l4">
-                            <div class="collection">
-                                <a href="#open-help" class="collection-item"><span class="badge" data-badge-caption=""
+                        <!-- TradingView Widget END -->
+                    </div>
+                    <div class="col l12">
+                        <h5>Statistics</h5>
+                        <div class="row">
+                            <div class="col s12 l4">
+                                <div class="collection">
+                                    <a href="#open-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                    id="open">Loading...</span>
                                     Open
                                 </a>
-                                <div id="open-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Open</h4>
-                                        <p>A bunch of text describing what the Open is and what it means for investors.
-                                            A bunch of text describing what the Open is and what it means for investors.
-                                            A bunch of text describing what the Open is and what it means for investors.
-                                            A bunch of text describing what the Open is and what it means for investors.
-                                            A bunch of text describing what the Open is and what it means for
-                                            investors.</p>
+                                    <div id="open-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Open</h4>
+                                            <p>A bunch of text describing what the Open is and what it means for investors.
+                                                A bunch of text describing what the Open is and what it means for investors.
+                                                A bunch of text describing what the Open is and what it means for investors.
+                                                A bunch of text describing what the Open is and what it means for investors.
+                                                A bunch of text describing what the Open is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
-                                    </div>
-                                </div>
 
-                                <a href="#close-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                    <a href="#close-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                     id="high">Loading...</span>High
                                 </a>
-                                <div id="close-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Close</h4>
-                                        <p>A bunch of text describing what the Close is and what it means for investors.
-                                            A bunch of text describing what the Close is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Close is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Close is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Close is and what it means for
-                                            investors.</p>
+                                    <div id="close-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Close</h4>
+                                            <p>A bunch of text describing what the Close is and what it means for investors.
+                                                A bunch of text describing what the Close is and what it means for investors.
+                                                A bunch of text describing what the Close is and what it means for investors.
+                                                A bunch of text describing what the Close is and what it means for investors.
+                                                A bunch of text describing what the Close is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
-                                    </div>
-                                </div>
 
-                                <a href="#low-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                    <a href="#low-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                   id="low">Loading...</span>Low
                                 </a>
-                                <div id="low-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Low</h4>
-                                        <p>A bunch of text describing what the Low is and what it means for investors.
-                                            A bunch of text describing what the Low is and what it means for investors.
-                                            A bunch of text describing what the Low is and what it means for investors.
-                                            A bunch of text describing what the Low is and what it means for investors.
-                                            A bunch of text describing what the Low is and what it means for
-                                            investors.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    <div id="low-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Low</h4>
+                                            <p>A bunch of text describing what the Low is and what it means for investors. A
+                                                bunch of text describing what the Low is and what it means for investors.
+                                                A bunch of text describing what the Low is and what it means for investors.
+                                                A bunch of text describing what the Low is and what it means for investors.
+                                                A bunch of text describing what the Low is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 l4">
-                            <div class="collection">
-                                <a href="#market-cap-help" class="collection-item"><span class="badge"
+                            <div class="col s12 l4">
+                                <div class="collection">
+                                    <a href="#market-cap-help" class="collection-item"><span class="badge"
                                                                                          data-badge-caption="" id="cap">Loading...</span>Market
                                     Cap </a>
-                                <div id="market-cap-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Market Cap</h4>
-                                        <p>A bunch of text describing what the Market Cap is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Market Cap is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Market Cap is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Market Cap is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Market Cap is and what it means for
-                                            investors.</p>
+                                    <div id="market-cap-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Market Cap</h4>
+                                            <p>A bunch of text describing what the Market Cap is and what it means for investors.
+                                                A bunch of text describing what the Market Cap is and what it means for investors.
+                                                A bunch of text describing what the Market Cap is and what it means for investors.
+                                                A bunch of text describing what the Market Cap is and what it means for investors.
+                                                A bunch of text describing what the Market Cap is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
-                                    </div>
-                                </div>
 
-                                <a href="#volume-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                    <a href="#volume-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                      id="volume">Loading...</span>Volume
                                 </a>
-                                <div id="volume-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Volume</h4>
-                                        <p>A bunch of text describing what the Volume is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Volume is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Volume is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Volume is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Volume is and what it means for
-                                            investors.</p>
+                                    <div id="volume-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Volume</h4>
+                                            <p>A bunch of text describing what the Volume is and what it means for investors.
+                                                A bunch of text describing what the Volume is and what it means for investors.
+                                                A bunch of text describing what the Volume is and what it means for investors.
+                                                A bunch of text describing what the Volume is and what it means for investors.
+                                                A bunch of text describing what the Volume is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
-                                    </div>
-                                </div>
 
-                                <a href="#shares-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                    <a href="#shares-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                      id="shares">Loading...</span>Shares
                                 </a>
-                                <div id="shares-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Shares</h4>
-                                        <p>A bunch of text describing what the Shares is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Shares is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Shares is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Shares is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Shares is and what it means for
-                                            investors.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    <div id="shares-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Shares</h4>
+                                            <p>A bunch of text describing what the Shares is and what it means for investors.
+                                                A bunch of text describing what the Shares is and what it means for investors.
+                                                A bunch of text describing what the Shares is and what it means for investors.
+                                                A bunch of text describing what the Shares is and what it means for investors.
+                                                A bunch of text describing what the Shares is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 l4">
-                            <div class="collection">
-                                <a href="#range-help" class="collection-item"><span class="badge" data-badge-caption=""
+                            <div class="col s12 l4">
+                                <div class="collection">
+                                    <a href="#range-help" class="collection-item"><span class="badge" data-badge-caption=""
                                                                                    id="range">Loading...</span>Range
                                 </a>
-                                <div id="range-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>Range</h4>
-                                        <p>A bunch of text describing what the Range is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Range is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Range is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Range is and what it means for
-                                            investors.
-                                            A bunch of text describing what the Range is and what it means for
-                                            investors.</p>
+                                    <div id="range-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Range</h4>
+                                            <p>A bunch of text describing what the Range is and what it means for investors.
+                                                A bunch of text describing what the Range is and what it means for investors.
+                                                A bunch of text describing what the Range is and what it means for investors.
+                                                A bunch of text describing what the Range is and what it means for investors.
+                                                A bunch of text describing what the Range is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
-                                    </div>
-                                </div>
-                                <a href="#52-week-high-help" class="collection-item"><span class="badge"
+                                    <a href="#52-week-high-help" class="collection-item"><span class="badge"
                                                                                           data-badge-caption=""
                                                                                           id="high52">Loading...</span>52-week
                                     High </a>
-                                <div id="52-week-high-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>52-week High</h4>
-                                        <p>A bunch of text describing what the 52-week High is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week High is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week High is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week High is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week High is and what it means for
-                                            investors.</p>
+                                    <div id="52-week-high-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>52-week High</h4>
+                                            <p>A bunch of text describing what the 52-week High is and what it means for investors.
+                                                A bunch of text describing what the 52-week High is and what it means for
+                                                investors. A bunch of text describing what the 52-week High is and what it
+                                                means for investors. A bunch of text describing what the 52-week High is
+                                                and what it means for investors. A bunch of text describing what the 52-week
+                                                High is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
-                                    </div>
-                                </div>
-                                <a href="#52-week-low-help" class="collection-item"><span class="badge"
+                                    <a href="#52-week-low-help" class="collection-item"><span class="badge"
                                                                                          data-badge-caption=""
                                                                                          id="low52">Loading...</span>52-week
                                     Low </a>
-                                <div id="52-week-low-help" class="modal">
-                                    <div class="modal-content">
-                                        <h4>52-week Low</h4>
-                                        <p>A bunch of text describing what the 52-week Low is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week Low is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week Low is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week Low is and what it means for
-                                            investors.
-                                            A bunch of text describing what the 52-week Low is and what it means for
-                                            investors.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="divider"></div>
-                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    <div id="52-week-low-help" class="modal">
+                                        <div class="modal-content">
+                                            <h4>52-week Low</h4>
+                                            <p>A bunch of text describing what the 52-week Low is and what it means for investors.
+                                                A bunch of text describing what the 52-week Low is and what it means for
+                                                investors. A bunch of text describing what the 52-week Low is and what it
+                                                means for investors. A bunch of text describing what the 52-week Low is and
+                                                what it means for investors. A bunch of text describing what the 52-week
+                                                Low is and what it means for investors.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="divider"></div>
+                                            <a class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col s12 l5 left">
-                    <div class="section">
-                        <h5>News</h5>
-                        <div id="newsCollection" class="collection">
-                            <div id="news-loader" class="preloader-wrapper big active">
-                                <div class="spinner-layer spinner-blue">
-                                    <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                    </div><div class="gap-patch">
-                                    <div class="circle"></div>
-                                    </div><div class="circle-clipper right">
-                                    <div class="circle"></div>
+                    <div class="col s12 l5 left">
+                        <div class="section">
+                            <h5>News</h5>
+                            <div id="newsCollection" class="collection">
+                                <div id="news-loader" class="preloader-wrapper big active">
+                                    <div class="spinner-layer spinner-blue">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s12 l5 right">
-                    <div class="section">
-                <h5>Social</h5>
-                <!--<ul id="twitterFeed" class="collapsible" data-collapsible="accordion">
+                    <div class="col s12 l5 right">
+                        <div class="section">
+                            <h5>Social</h5>
+                            <!--<ul id="twitterFeed" class="collapsible" data-collapsible="accordion">
                 </ul>-->
 
-                <div id="twitterFeed" class="collection">
-                <div id="twitter-loader" class="preloader-wrapper big active">
-                    <div class="spinner-layer spinner-blue">
-                        <div class="circle-clipper left">
-                        <div class="circle"></div>
-                        </div><div class="gap-patch">
-                        <div class="circle"></div>
-                        </div><div class="circle-clipper right">
-                        <div class="circle"></div>
+                            <div id="twitterFeed" class="collection">
+                                <div id="twitter-loader" class="preloader-wrapper big active">
+                                    <div class="spinner-layer spinner-blue">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                </div>
-                
-            </div>
-                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<footer class="page-footer green lighten-1">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">Footer content goes here!</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Link 4</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
+    <footer class="page-footer green lighten-1">
         <div class="container">
-            © 2016 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#">More Links</a>
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">Footer content goes here!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#">More Links</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
