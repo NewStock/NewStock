@@ -4,7 +4,7 @@ $(document).ready(function(){
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         var query = document.getElementById('search').value;
-        if (query.length > 4) window.location.href = '/404.html'
+        if (query.length > 5) window.location.href = '/404.html'
         else window.location.href = '/stock.html?stock=' + query;
     });
 
@@ -12,7 +12,7 @@ $(document).ready(function(){
     form_mobile.addEventListener('submit', function (e) {
         e.preventDefault();
         var query = document.getElementById('search-mobile').value;
-        if (query.length > 4) window.location.href = '/404.html'
+        if (query.length > 5) window.location.href = '/404.html'
         else window.location.href = '/stock.html?stock=' + query;
     });
 
