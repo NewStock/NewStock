@@ -22,6 +22,9 @@ $(document).ready(function() {
         var high52 = data[11];
         var low52 = data[12];
 
+        //set page title
+        document.title = stockName + ": " + name + " | NewStock";
+
         //hide the aa span if there's no after hours
         if (aa==="N/A") $('#afterHours').css({display: "none"});
 
