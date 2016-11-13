@@ -10,6 +10,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <!--JS-->
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <script src="/js/code.js"></script>
 </head>
 
 <body>
@@ -44,10 +52,49 @@
     </div>
 </nav>
 
+
+<script>
+    var stockName = findGetParameter("stock");
+    $(document).ready(function() {
+
+        $('#stockName').html(stockName)
+
+        setInterval(function(){
+        $.ajax({url: "http://finance.yahoo.com/d/quotes.csv?s="+stockName+"&f=napc8", success: function(data)
+        {
+            data = CSVtoArray(data);
+            console.log(data);
+
+            var name = data[0];
+            var price = data[1];
+            var close = data[2];
+            var aa = data[3];
+
+            if (aa==="N/A") $('#afterHours').css({display: "none"});
+
+            var diff = (price-close).toFixed(2);
+            var sign = diff > 0 ? "+" : "-";
+            $('#price').html(price);
+
+            var dspan = $('#diff');
+
+            dspan.html("(" + sign + ' $' + Math.abs(diff) + ")").removeClass('green-text red-text');
+            if(diff > 0) addClass('green-text')
+            else dspan.addClass('red-text');
+        }})}, 60*10);
+
+        });
+    // setInterval(function()
+    // {
+    //     price = $.ajax()
+    // }, 30);
+</script>
+
+
 <div class="container">
     <div class="row">
-        <h1 class="center">AAPL $108.73 <span class="green-text">(+ $2.95)</span></h1>
-        <h5 class="center red-text">(- $0.98) After Hours</h5>
+        <h1 class="center"><span id="stockName"> AAPL</span> $<span id="price">108.73</span> <span id="diff" class="green-text">(+ $2.95)</span></h1>
+        <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
 
         <div class="col l2">
             <h5>Portfolio</h5>
