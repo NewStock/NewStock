@@ -10,5 +10,6 @@ $(document).ready(function(){
     $("#closebutton").click(function () {
     document.getElementById("search").value = "";
     });
-    
+
+    $('input.autocomplete').autocomplete({limit: 10, data: $.extend(NASDAQ_auto, NYSE_auto)});
 });
