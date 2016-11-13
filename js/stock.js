@@ -58,8 +58,8 @@ $(document).ready(function() {
 
         //market cap--- wrong data!!!!
         $('#cap').html(makeSpanText(cap.substring(0,cap.length-1)) + "B");
-        $('#volume').html(makeSpanText(volume));
-        $('#shares').html(makeSpanText(shares));
+        $('#volume').html(volume);
+        $('#shares').html(shares);
 
         range = range.split(" - ");
         rlow = "$"+((1*range[0]).toFixed(2));
