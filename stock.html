@@ -55,167 +55,350 @@
 </nav>
 
 <main>
-<div class="container">
-    <div class="row">
-        <h1 class="center"><span id="stockName"> AAPL</span> $<span id="price">108.73</span> <span id="diff" class="green-text">(+ $2.95)</span></h1>
-        <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
+    <div class="container">
+        <div class="row">
+            <h1 class="center"><span id="stockName"> AAPL</span> $<span id="price">108.73</span> <span id="diff"
+                                                                                                       class="green-text">(+ $2.95)</span>
+            </h1>
+            <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
 
-        <div class="col l2">
-            <h5>Portfolio</h5>
-            <div class="collection hoverable">
-                <a href="#" class="collection-item"><span class="new badge green" data-badge-caption="">+ $2.95</span>AAPL</a>
-                <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $1.03</span>AMZN</a>
-                <a href="#" class="collection-item"><span class="new badge green" data-badge-caption="">+ $1.73</span>TSLA</a>
-                <a href="#" class="collection-item"><span class="new badge green" data-badge-caption="">+ $0.98</span>TWTR</a>
-                <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $0.65</span>YHOO</a>
+            <div class="col l2">
+                <h5>Portfolio</h5>
+                <div class="collection hoverable">
+                    <a href="#" class="collection-item"><span class="new badge green"
+                                                              data-badge-caption="">+ $2.95</span>AAPL</a>
+                    <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $1.03</span>AMZN</a>
+                    <a href="#" class="collection-item"><span class="new badge green"
+                                                              data-badge-caption="">+ $1.73</span>TSLA</a>
+                    <a href="#" class="collection-item"><span class="new badge green"
+                                                              data-badge-caption="">+ $0.98</span>TWTR</a>
+                    <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $0.65</span>YHOO</a>
+                </div>
             </div>
-        </div>
-        <div class="col l10">
-            <!-- TradingView Widget BEGIN -->
-            <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-            <script type="text/javascript">
-                var theWid = new TradingView.widget({
-                    "width": '100%',
-                    "height": 400,
-                    "symbol": stockName,
-                    "interval": "30",
-                    "timezone": "Etc/UTC",
-                    "theme": "White",
-                    "style": "2",
-                    "locale": "en",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "hide_top_toolbar": true,
-                    "save_image": false,
-                    "allow_symbol_change": true,
-                    "hideideas": true
-                });
-            </script>
-            <!-- TradingView Widget END -->
+            <div class="col l10">
+                <!-- TradingView Widget BEGIN -->
+                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                <script type="text/javascript">
+                    var theWid = new TradingView.widget({
+                        "width": '100%',
+                        "height": 400,
+                        "symbol": stockName,
+                        "interval": "30",
+                        "timezone": "Etc/UTC",
+                        "theme": "White",
+                        "style": "2",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_top_toolbar": true,
+                        "save_image": false,
+                        "allow_symbol_change": true,
+                        "hideideas": true
+                    });
+                </script>
+                <!-- TradingView Widget END -->
 
-            <div class="col l12">
-                <h5>Statistics</h5>
-                <div class="row">
-                    <div class="col l4">
-                        <div class="collection">
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="open">+ $2.95</span>Open
-                            </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="high">- $1.03</span>High
-                            </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="low">+ $1.73</span>Low
-                            </a>
+                <div class="col l12">
+                    <h5>Statistics</h5>
+                    <div class="row">
+                        <div class="col l4">
+                            <div class="collection">
+                                <a href="#open-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                                                                   id="open">+ $2.95</span>
+                                    Open
+                                </a>
+                                <div id="open-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Open</h4>
+                                        <p>A bunch of text describing what the Open is and what it means for investors.
+                                            A bunch of text describing what the Open is and what it means for investors.
+                                            A bunch of text describing what the Open is and what it means for investors.
+                                            A bunch of text describing what the Open is and what it means for investors.
+                                            A bunch of text describing what the Open is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+
+                                <a href="#close-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                                                                    id="high">- $1.03</span>High
+                                </a>
+                                <div id="close-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Close</h4>
+                                        <p>A bunch of text describing what the Close is and what it means for investors.
+                                            A bunch of text describing what the Close is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Close is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Close is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Close is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+
+                                <a href="#low-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                                                                  id="low">+ $1.73</span>Low
+                                </a>
+                                <div id="low-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Low</h4>
+                                        <p>A bunch of text describing what the Low is and what it means for investors.
+                                            A bunch of text describing what the Low is and what it means for investors.
+                                            A bunch of text describing what the Low is and what it means for investors.
+                                            A bunch of text describing what the Low is and what it means for investors.
+                                            A bunch of text describing what the Low is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col l4">
-                        <div class="collection">
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="cap">+ $2.95</span>Market
-                                Cap </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="volume">- $1.03</span>Volume
-                            </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="shares">+ $1.73</span>Shares
-                            </a>
+                        <div class="col l4">
+                            <div class="collection">
+                                <a href="#market-cap-help" class="collection-item"><span class="badge"
+                                                                                         data-badge-caption="" id="cap">+ $2.95</span>Market
+                                    Cap </a>
+                                <div id="market-cap-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Market Cap</h4>
+                                        <p>A bunch of text describing what the Market Cap is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Market Cap is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Market Cap is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Market Cap is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Market Cap is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+
+                                <a href="#volume-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                                                                     id="volume">- $1.03</span>Volume
+                                </a>
+                                <div id="volume-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Volume</h4>
+                                        <p>A bunch of text describing what the Volume is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Volume is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Volume is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Volume is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Volume is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+
+                                <a href="#shares-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                                                                     id="shares">+ $1.73</span>Shares
+                                </a>
+                                <div id="shares-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Shares</h4>
+                                        <p>A bunch of text describing what the Shares is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Shares is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Shares is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Shares is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Shares is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col l4">
-                        <div class="collection">
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="range">+ $2.95</span>Range
-                            </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="high52">- $1.03</span>52-week
-                                High </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="" id="low52">+ $1.73</span>52-week
-                                Low </a>
+                        <div class="col l4">
+                            <div class="collection">
+                                <a href="#range-help" class="collection-item"><span class="badge" data-badge-caption=""
+                                                                                   id="range">+ $2.95</span>Range
+                                </a>
+                                <div id="range-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Range</h4>
+                                        <p>A bunch of text describing what the Range is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Range is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Range is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Range is and what it means for
+                                            investors.
+                                            A bunch of text describing what the Range is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+                                <a href="#52-week-high-help" class="collection-item"><span class="badge"
+                                                                                          data-badge-caption=""
+                                                                                          id="high52">- $1.03</span>52-week
+                                    High </a>
+                                <div id="52-week-high-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>52-week High</h4>
+                                        <p>A bunch of text describing what the 52-week High is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week High is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week High is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week High is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week High is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+                                <a href="#52-week-low-help" class="collection-item"><span class="badge"
+                                                                                         data-badge-caption=""
+                                                                                         id="low52">+ $1.73</span>52-week
+                                    Low </a>
+                                <div id="52-week-low-help" class="modal">
+                                    <div class="modal-content">
+                                        <h4>52-week Low</h4>
+                                        <p>A bunch of text describing what the 52-week Low is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week Low is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week Low is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week Low is and what it means for
+                                            investors.
+                                            A bunch of text describing what the 52-week Low is and what it means for
+                                            investors.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="divider"></div>
+                                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col l5 left">
-                <div class="section">
-                    <h5>News</h5>
-                    <div class="collection">
-                        <a href="#" class="collection-item avatar">
-                            <i class="material-icons circle blue">folder</i>
-                            <span class="title">Title</span>
-                            <p>Website Name <br>
-                                Article Date
-                            </p>
-                        </a>
-                        <a href="#" class="collection-item avatar">
-                            <i class="material-icons circle yellow">folder</i>
-                            <span class="title">Title</span>
-                            <p>First Line <br>
-                                Second Line
-                            </p>
-                        </a>
-                        <a href="#" class="collection-item avatar">
-                            <i class="material-icons circle green">folder</i>
-                            <span class="title">Title</span>
-                            <p>First Line <br>
-                                Second Line
-                            </p>
-                        </a>
-                        <a href="#" class="collection-item avatar">
-                            <i class="material-icons circle red">folder</i>
-                            <span class="title">Title</span>
-                            <p>First Line <br>
-                                Second Line
-                            </p>
-                        </a>
-                        <a href="#" class="collection-item avatar">
-                            <i class="material-icons circle black">folder</i>
-                            <span class="title">Title</span>
-                            <p>First Line <br>
-                                Second Line
-                            </p>
-                        </a>
+                <div class="col l5 left">
+                    <div class="section">
+                        <h5>News</h5>
+                        <div class="collection">
+                            <a href="#" class="collection-item avatar">
+                                <i class="material-icons circle blue">folder</i>
+                                <span class="title">Title</span>
+                                <p>Website Name <br>
+                                    Article Date
+                                </p>
+                            </a>
+                            <a href="#" class="collection-item avatar">
+                                <i class="material-icons circle yellow">folder</i>
+                                <span class="title">Title</span>
+                                <p>First Line <br>
+                                    Second Line
+                                </p>
+                            </a>
+                            <a href="#" class="collection-item avatar">
+                                <i class="material-icons circle green">folder</i>
+                                <span class="title">Title</span>
+                                <p>First Line <br>
+                                    Second Line
+                                </p>
+                            </a>
+                            <a href="#" class="collection-item avatar">
+                                <i class="material-icons circle red">folder</i>
+                                <span class="title">Title</span>
+                                <p>First Line <br>
+                                    Second Line
+                                </p>
+                            </a>
+                            <a href="#" class="collection-item avatar">
+                                <i class="material-icons circle black">folder</i>
+                                <span class="title">Title</span>
+                                <p>First Line <br>
+                                    Second Line
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l5 right">
-                <div class="section">
-                    <h5>Social</h5>
-                    <div class="collection hoverable">
-                        <a href="#" class="collection-item truncate">
-                            <div class="chip">
-                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                                Norman Gordon
-                            </div>
-                            $AAPL up big today, can't wait to see how they do tomorrow!
-                        </a>
-                        <a href="#" class="collection-item truncate">
-                            <div class="chip">
-                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                                Giles Posture
-                            </div>
-                            Upset at $AMZN earnings report...but I'll hold until Q1 2017
-                        </a>
-                        <a href="#" class="collection-item truncate">
-                            <div class="chip">
-                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                                Pelican Steve
-                            </div>
-                            New $TSLA product? Stock price should be heading up shortly!
-                        </a>
-                        <a href="#" class="collection-item truncate">
-                            <div class="chip">
-                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                                Weir Doe
-                            </div>
-                            Loving that $TWTR is up today! Always nice to own a part of a product you use
-                        </a>
-                        <a href="#" class="collection-item truncate">
-                            <div class="chip">
-                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                                Dianne Ameter
-                            </div>
-                            $YHOO hasn't been looking too good lately, any other tech options?
-                        </a>
+                <div class="col l5 right">
+                    <div class="section">
+                        <h5>Social</h5>
+                        <div class="collection hoverable">
+                            <a href="#" class="collection-item truncate">
+                                <div class="chip">
+                                    <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                    Norman Gordon
+                                </div>
+                                $AAPL up big today, can't wait to see how they do tomorrow!
+                            </a>
+                            <a href="#" class="collection-item truncate">
+                                <div class="chip">
+                                    <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                    Giles Posture
+                                </div>
+                                Upset at $AMZN earnings report...but I'll hold until Q1 2017
+                            </a>
+                            <a href="#" class="collection-item truncate">
+                                <div class="chip">
+                                    <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                    Pelican Steve
+                                </div>
+                                New $TSLA product? Stock price should be heading up shortly!
+                            </a>
+                            <a href="#" class="collection-item truncate">
+                                <div class="chip">
+                                    <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                    Weir Doe
+                                </div>
+                                Loving that $TWTR is up today! Always nice to own a part of a product you use
+                            </a>
+                            <a href="#" class="collection-item truncate">
+                                <div class="chip">
+                                    <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                    Dianne Ameter
+                                </div>
+                                $YHOO hasn't been looking too good lately, any other tech options?
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </main>
 
 <footer class="page-footer green lighten-1">
