@@ -7,6 +7,13 @@ $(document).ready(function(){
         window.location.href = '/stock.html?stock=' + query;
     });
 
+    var form_mobile = document.getElementById('search-form-mobile');
+    form_mobile.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var query = document.getElementById('search-mobile').value;
+        window.location.href = '/stock.html?stock=' + query;
+    });
+
     $("#closebutton").click(function () {
     document.getElementById("search").value = "";
     });
