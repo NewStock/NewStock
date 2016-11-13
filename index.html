@@ -69,14 +69,16 @@
                 var theWid = new TradingView.widget({
                     "width": '100%',
                     "height": 400,
-                    "symbol": "NASDAQ:AAPL",
+                    "symbol": stockName,
                     "interval": "D",
                     "timezone": "Etc/UTC",
                     "theme": "White",
-                    "style": "1",
+                    "style": "2",
                     "locale": "en",
                     "toolbar_bg": "#f1f3f6",
                     "enable_publishing": false,
+                    "hide_top_toolbar": true,
+                    "save_image": false,
                     "allow_symbol_change": true,
                     "hideideas": true
                 });
