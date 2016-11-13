@@ -7,7 +7,9 @@
 
     <!-- CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,20 +17,20 @@
 <nav class="light-green lighten-1" role="navigation">
     <div class="nav-wrapper container">
         <div class="row">
-            <div class="col s2">
+            <div class="col l2">
                 <a href="#" class="brand-logo"><i class="material-icons">trending_up</i>NewStock</a>
                 <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
-            <div class="col s8">
-                <!--<form>
+            <div class="col l8">
+                <form>
                     <div class="input-field">
-                        <input id="search" type="search" required>
+                        <input id="search" type="search" placeholder="Search a stock..." required>
                         <label for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
-                </form>-->
+                </form>
             </div>
-            <div class="col s2">
+            <div class="col l2">
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Sign Up</a></li>
@@ -45,7 +47,7 @@
 <div class="container">
     <h1 class="center-align">Welcome to NewStock!</h1>
     <div class="row">
-        <div class="col s2">
+        <div class="col l2">
             <div class="collection hoverable">
                 <a href="#" class="collection-item"><span class="new badge green" data-badge-caption="">+ $2.95</span>AAPL</a>
                 <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $1.03</span>AMZN</a>
@@ -54,92 +56,133 @@
                 <a href="#" class="collection-item"><span class="new badge red" data-badge-caption="">- $0.65</span>YHOO</a>
             </div>
         </div>
-        <div class="col s10">
+        <div class="col l10">
             <!-- TradingView Widget BEGIN -->
-	<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-	<script type="text/javascript">
-	var theWid = new TradingView.widget({
-	  "width": '100%',
-	  "height": 400,
-	  "symbol": "NASDAQ:AAPL",
-	  "interval": "D",
-	  "timezone": "Etc/UTC",
-	  "theme": "White",
-	  "style": "1",
-	  "locale": "en",
-	  "toolbar_bg": "#f1f3f6",
-	  "enable_publishing": false,
-	  "allow_symbol_change": true,
-	  "hideideas": true
-	});
-	</script>
-	<!-- TradingView Widget END -->
+            <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+            <script type="text/javascript">
+                var theWid = new TradingView.widget({
+                    "width": '100%',
+                    "height": 400,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "White",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "hideideas": true
+                });
+            </script>
+            <!-- TradingView Widget END -->
         </div>
     </div>
 
     <div class="row">
-        <div class="col s5 left">
+        <div class="col l5 left">
             <div class="section">
                 <h5>NEWS</h5>
 
-                <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="?widget_parameter=%7B%22sources%22%3A%5B%7B%22source%22%3A%22http%3A%2F%2Frss.cnn.com%2Frss%2Fmoney_markets.rss%22%2C%22type%22%3A%22RSS%22%7D%5D%2C%22name%22%3A%22%22%2C%22width%22%3A0%2C%22height%22%3A%22400%22%2C%22height_by_article%22%3A0%2C%22target%22%3A%22_blank%22%2C%22font%22%3A%22Arial%2C%20Helvetica%2C%20sans-serif%22%2C%22title_font_size%22%3A%2216%22%2C%22item_title_font_size%22%3A%2216%22%2C%22item_description_font_size%22%3A%2212%22%2C%22border%22%3A%22on%22%2C%22css_url%22%3A%22%22%2C%22responsive%22%3A%22on%22%2C%22text_direction%22%3A%22left%22%2C%22text_alignment%22%3A%22left%22%2C%22corner%22%3A%22rounded%22%2C%22scroll%22%3A%22on%22%2C%22auto_scroll%22%3A%22on%22%2C%22auto_scroll_direction%22%3A%22up%22%2C%22auto_scroll_step_speed%22%3A%224%22%2C%22auto_scroll_mc_speed%22%3A%2220%22%2C%22sort%22%3A%22new%22%2C%22title%22%3A%22on%22%2C%22title_sentence%22%3A%22%22%2C%22title_link%22%3A%22%22%2C%22title_bgcolor%22%3A%22%239ccc65%22%2C%22title_color%22%3A%22%23ffffff%22%2C%22title_bgimage%22%3A%22%22%2C%22item_bgcolor%22%3A%22%23ffffff%22%2C%22item_bgimage%22%3A%22%22%2C%22item_title_length%22%3A%2255%22%2C%22item_title_color%22%3A%22%239ccc65%22%2C%22item_border_bottom%22%3A%22on%22%2C%22item_description%22%3A%22both%22%2C%22item_link%22%3A%22off%22%2C%22item_description_length%22%3A%22100%22%2C%22item_description_color%22%3A%22%23505659%22%2C%22item_date%22%3A%22on%22%2C%22item_date_format%22%3A%22%25b%20%25e%2C%20%25Y%20%25k%3A%25M%22%2C%22item_date_timezone%22%3A%22%22%2C%22item_description_style%22%3A%22thumbnail%22%2C%22item_thumbnail%22%3A%22crop%22%2C%22item_thumbnail_selection%22%3A%22auto%22%2C%22article_num%22%3A%2215%22%2C%22item_player%22%3A%22youtube%22%2C%22keyword_inc%22%3A%22%22%2C%22keyword_exc%22%3A%22%22%7D"></script> <!-- end feedwind code -->
+                <!-- start feedwind code -->
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js"
+                        data-fw-param="?widget_parameter=%7B%22sources%22%3A%5B%7B%22source%22%3A%22http%3A%2F%2Frss.cnn.com%2Frss%2Fmoney_markets.rss%22%2C%22type%22%3A%22RSS%22%7D%5D%2C%22name%22%3A%22%22%2C%22width%22%3A0%2C%22height%22%3A%22400%22%2C%22height_by_article%22%3A0%2C%22target%22%3A%22_blank%22%2C%22font%22%3A%22Arial%2C%20Helvetica%2C%20sans-serif%22%2C%22title_font_size%22%3A%2216%22%2C%22item_title_font_size%22%3A%2216%22%2C%22item_description_font_size%22%3A%2212%22%2C%22border%22%3A%22on%22%2C%22css_url%22%3A%22%22%2C%22responsive%22%3A%22on%22%2C%22text_direction%22%3A%22left%22%2C%22text_alignment%22%3A%22left%22%2C%22corner%22%3A%22rounded%22%2C%22scroll%22%3A%22on%22%2C%22auto_scroll%22%3A%22on%22%2C%22auto_scroll_direction%22%3A%22up%22%2C%22auto_scroll_step_speed%22%3A%224%22%2C%22auto_scroll_mc_speed%22%3A%2220%22%2C%22sort%22%3A%22new%22%2C%22title%22%3A%22on%22%2C%22title_sentence%22%3A%22%22%2C%22title_link%22%3A%22%22%2C%22title_bgcolor%22%3A%22%239ccc65%22%2C%22title_color%22%3A%22%23ffffff%22%2C%22title_bgimage%22%3A%22%22%2C%22item_bgcolor%22%3A%22%23ffffff%22%2C%22item_bgimage%22%3A%22%22%2C%22item_title_length%22%3A%2255%22%2C%22item_title_color%22%3A%22%239ccc65%22%2C%22item_border_bottom%22%3A%22on%22%2C%22item_description%22%3A%22both%22%2C%22item_link%22%3A%22off%22%2C%22item_description_length%22%3A%22100%22%2C%22item_description_color%22%3A%22%23505659%22%2C%22item_date%22%3A%22on%22%2C%22item_date_format%22%3A%22%25b%20%25e%2C%20%25Y%20%25k%3A%25M%22%2C%22item_date_timezone%22%3A%22%22%2C%22item_description_style%22%3A%22thumbnail%22%2C%22item_thumbnail%22%3A%22crop%22%2C%22item_thumbnail_selection%22%3A%22auto%22%2C%22article_num%22%3A%2215%22%2C%22item_player%22%3A%22youtube%22%2C%22keyword_inc%22%3A%22%22%2C%22keyword_exc%22%3A%22%22%7D"></script>
+                <!-- end feedwind code -->
 
                 <div class="collection hoverable">
-                    <a href="#" class="collection-item truncate">Markets Right Now: Stocks close mostly higher on Wall Street</a>
-                    <a href="#" class="collection-item truncate">Trump Says He May Keep Parts of Obama Health Care Act</a>
+                    <a href="#" class="collection-item truncate">Markets Right Now: Stocks close mostly higher on Wall
+                        Street</a>
+                    <a href="#" class="collection-item truncate">Trump Says He May Keep Parts of Obama Health Care
+                        Act</a>
                     <a href="#" class="collection-item truncate">Obama Administration Gives Up on Pacific Trade Deal</a>
                     <a href="#" class="collection-item truncate">Mexico's Peso Regains Some Lost Ground--Update</a>
-                    <a href="#" class="collection-item truncate">Trump's win might blow up the Federal Reserve's plans for next
+                    <a href="#" class="collection-item truncate">Trump's win might blow up the Federal Reserve's plans
+                        for next
                         year</a>
                 </div>
             </div>
         </div>
-        <div class="col s5 right">
+        <div class="col l5 right">
             <div class="section">
                 <h5>SOCIAL</h5>
 
-                                        <a class="twitter-timeline"  href="https://twitter.com/search?q=%24AAPL" data-widget-id="797528182249455616">Tweets about $AAPL</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
-          
-          
-                <div class="collection hoverable">
-                    <a href="#" class="collection-item truncate">
-                        <div class="chip">
-                            <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                            Norman Gordon
+                <a class="twitter-timeline" href="https://twitter.com/search?q=%24AAPL"
+                   data-widget-id="797528182249455616">Tweets about $AAPL</a>
+                <script>!function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");</script>
+
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header">
+                            <div class="chip">
+                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                Norman Gordon
+                            </div>
+                            First
                         </div>
-                        $AAPL up big today, can't wait to see how they do tomorrow!
-                    </a>
-                    <a href="#" class="collection-item truncate">
-                        <div class="chip">
-                            <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                            Giles Posture
+                        <div class="collapsible-body"><p>$AAPL up big today, can't wait to see how they do tomorrow!
+                            <a class="light-blue waves-effect waves-light btn left">VIEW
+                                ON <i class="fa fa-twitter fa-fw"></i></a></p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <div class="chip">
+                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                Giles Posture
+                            </div>
+                            First
                         </div>
-                        Upset at $AMZN earnings report...but I'll hold until Q1 2017
-                    </a>
-                    <a href="#" class="collection-item truncate">
-                        <div class="chip">
-                            <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                            Pelican Steve
+                        <div class="collapsible-body"><p>Upset at $AMZN earnings report...but I'll hold until Q1 2017
+                            <a class="light-blue waves-effect waves-light btn left">VIEW
+                                ON <i class="fa fa-twitter fa-fw"></i></a></p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <div class="chip">
+                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                Pelican Steve
+                            </div>
+                            First
                         </div>
-                        New $TSLA product? Stock price should be heading up shortly!
-                    </a>
-                    <a href="#" class="collection-item truncate">
-                        <div class="chip">
-                            <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                            Weir Doe
+                        <div class="collapsible-body"><p>New $TSLA product? Stock price should be heading up shortly!
+                            <a class="light-blue waves-effect waves-light btn left">VIEW
+                                ON <i class="fa fa-twitter fa-fw"></i></a></p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <div class="chip">
+                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                Weir Doe
+                            </div>
+                            First
                         </div>
-                        Loving that $TWTR is up today! Always nice to own a part of a product you use
-                    </a>
-                    <a href="#" class="collection-item truncate">
-                        <div class="chip">
-                            <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
-                            Dianne Ameter
+                        <div class="collapsible-body"><p>Loving that $TWTR is up today! Always nice to own a part of a
+                            product you use
+                            <a class="light-blue waves-effect waves-light btn left">VIEW
+                                ON <i class="fa fa-twitter fa-fw"></i></a></p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <div class="chip">
+                                <img src="http://i.imgur.com/Oouib2B.png" alt="Contact Person">
+                                Dianne Ameter
+                            </div>
+                            First
                         </div>
-                        $YHOO hasn't been looking too good lately, any other tech options?
-                    </a>
-                </div>
+                        <div class="collapsible-body"><p>$YHOO hasn't been looking too good lately, any other tech
+                            options?
+                            <a class="light-blue waves-effect waves-light btn left">VIEW
+                                ON <i class="fa fa-twitter fa-fw"></i></a></p></div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
