@@ -51,7 +51,7 @@
 
         $('#stockName').html(stockName);
 
-        setInterval(function(){
+        updateFunc = function(){
         $.ajax({url: "http://finance.yahoo.com/d/quotes.csv?s="+stockName+"&f=napc8", success: function(data)
         {
             data = CSVtoArray(data);
@@ -62,18 +62,30 @@
             var close = data[2];
             var aa = data[3];
 
+            //hide the aa span if there's no after hours
             if (aa==="N/A") $('#afterHours').css({display: "none"});
 
+            //Find the difference in price between now and last close
             var diff = (price-close).toFixed(2);
             var sign = diff > 0 ? "+" : "-";
             $('#price').html(price);
 
+            //update the diff span
             var dspan = $('#diff');
-
             dspan.html("(" + sign + ' $' + Math.abs(diff) + ")").removeClass('green-text red-text');
             if(diff > 0) addClass('green-text');
             else dspan.addClass('red-text');
-        }})}, 60*10);
+            
+            //Update the after hours span
+            var aaspan = $('#afterHours');
+            aaspan.html("(" + sign + ' $' + Math.abs(aa) + ") After Hours").removeClass('green-text red-text');
+            if(aa > 0) addClass('green-text')
+            else aaspan.addClass('red-text');
+        }})};
+
+        updateFunc();
+
+        setInterval(updateFunc, 6000*10);
 
         });
     // setInterval(function()
@@ -105,7 +117,7 @@
                 var theWid = new TradingView.widget({
                     "width": '100%',
                     "height": 400,
-                    "symbol": "NASDAQ:AAPL",
+                    "symbol": stockName,
                     "interval": "D",
                     "timezone": "Etc/UTC",
                     "theme": "White",
