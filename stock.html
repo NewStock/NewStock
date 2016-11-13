@@ -16,7 +16,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
 
-    <script>var stockName = findGetParameter("stock");</script>
+    <script>var stockName = findGetParameter("stock").toUpperCase();</script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                     <div class="input-field">
                         <input id="search" type="search" placeholder="Search a stock..." required>
                         <label for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
+                        <i id="closebutton" class="material-icons">close</i>
                     </div>
                 </form>
             </div>
@@ -92,31 +92,31 @@
                 <div class="row">
                     <div class="col l4">
                         <div class="collection">
-                            <a class="collection-item"><span class="badge" data-badge-caption="">+ $2.95</span>Open
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="open">+ $2.95</span>Open
                             </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="">- $1.03</span>High
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="high">- $1.03</span>High
                             </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="">+ $1.73</span>Low
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="low">+ $1.73</span>Low
                             </a>
                         </div>
                     </div>
                     <div class="col l4">
                         <div class="collection">
-                            <a class="collection-item"><span class="badge" data-badge-caption="">+ $2.95</span>Market
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="cap">+ $2.95</span>Market
                                 Cap </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="">- $1.03</span>Volume
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="volume">- $1.03</span>Volume
                             </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="">+ $1.73</span>Shares
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="shares">+ $1.73</span>Shares
                             </a>
                         </div>
                     </div>
                     <div class="col l4">
                         <div class="collection">
-                            <a class="collection-item"><span class="badge" data-badge-caption="">+ $2.95</span>Range
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="range">+ $2.95</span>Range
                             </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="">- $1.03</span>52-week
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="high52">- $1.03</span>52-week
                                 High </a>
-                            <a class="collection-item"><span class="badge" data-badge-caption="">+ $1.73</span>52-week
+                            <a class="collection-item"><span class="badge" data-badge-caption="" id="low52">+ $1.73</span>52-week
                                 Low </a>
                         </div>
                     </div>

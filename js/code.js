@@ -4,3 +4,7 @@ form.addEventListener('submit', function (e) {
     var query = document.getElementById('search').value;
     window.location.href = '/stock.html?stock=' + query;
 });
+
+$("#closebutton").click(function () {
+    document.getElementById("search").value = "";
+});
