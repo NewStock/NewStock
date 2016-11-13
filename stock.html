@@ -11,11 +11,18 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/style.css">
 
+    <!--Data-->
+    <script type="text/javascript" src="js/NYSE.js"></script>
+    <script type="text/javascript" src="js/NASDAQ.js"></script>
+
     <!--  Scripts-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
     <script>var stockName = findGetParameter("stock").toUpperCase();</script>
+
+    <script type="text/javascript" src="js/code.js"></script>
+    <script type="text/javascript" src="js/stock.js"></script>
 </head>
 
 <body>
@@ -30,11 +37,19 @@
             <div class="col l7">
                 <form id="search-form">
                     <div class="input-field">
-                        <input id="search" type="search" placeholder="Search a stock..." required>
+                        <input id="search" type="search" class="autocomplete" autocomplete="off" placeholder="Search a stock..." required>
                         <label for="search"><i class="material-icons">search</i></label>
                         <i id="closebutton" class="material-icons">close</i>
                     </div>
                 </form>
+
+                <script>
+                    $(document).ready(function(){
+                        $('input.autocomplete').autocomplete({limit: 10, data: $.extend(NASDAQ_auto, NYSE_auto)});
+                        //$('input.autocomplete').autocomplete({data: {"Werg": null, "Blerg": null}})
+                    });
+                </script>
+
             </div>
             <div class="col l3">
                 <ul class="right hide-on-med-and-down">
@@ -426,10 +441,6 @@
         </div>
     </div>
 </footer>
-
-<!--More scripts-->
-<script type="text/javascript" src="js/code.js"></script>
-<script type="text/javascript" src="js/stock.js"></script>
 
 </body>
 </html>

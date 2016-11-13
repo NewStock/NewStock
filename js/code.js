@@ -1,10 +1,14 @@
-var form = document.getElementById('search-form');
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var query = document.getElementById('search').value;
-    window.location.href = '/stock.html?stock=' + query;
-});
+$(document).ready(function(){
 
-$("#closebutton").click(function () {
+    var form = document.getElementById('search-form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var query = document.getElementById('search').value;
+        window.location.href = '/stock.html?stock=' + query;
+    });
+
+    $("#closebutton").click(function () {
     document.getElementById("search").value = "";
+    });
+    
 });
