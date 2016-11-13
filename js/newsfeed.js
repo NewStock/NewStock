@@ -8,6 +8,8 @@ $(document).ready(function(){
 
     //console.log("Requesting")
     $.ajax("https://crossorigin.me/https://www.google.com/finance/company_news?output=rss&q="+stockName).done(function(data){
+        $('#news-loader').css({'display':'none'})
+
         var x2js = new X2JS();
         dataStr = data.documentElement.outerHTML;
         news = x2js.xml_str2json(dataStr);

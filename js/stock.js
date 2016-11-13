@@ -5,6 +5,9 @@ $(document).ready(function() {
     updateFunc = function(){
     $.ajax({url: "https://crossorigin.me/http://finance.yahoo.com/d/quotes.csv?s="+stockName+"&f=napc8ohgj1vj2mkj", success: function(data)
     {
+        //Get rid of progress crap
+        $('#progressBar').css({'display': 'none'})
+
         data = CSVtoArray(data);
         console.log(data);
 

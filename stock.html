@@ -92,10 +92,9 @@
                 </div>
             </div>
             <div class="col s12 l10">
-                <div class="progress">
-                    <div class="indeterminate"></div>
-                </div>
-                <h1 class="center"><span id="stockName">AAPL</span> $<span id="price">108.73</span> <span id="diff" class="green-text">(+ $2.95)</span></h1>
+                <h1 class="center"><span id="stockName"></span> $<span id="price"></span> <span id="diff" class="green-text"></span>
+                <div class="progress" id="progressBar"><div class="indeterminate"></div></div>
+                </h1>
                 
                 <h5 id="afterHours" class="center red-text">(- $0.98) After Hours</h5>
 
@@ -128,7 +127,7 @@
                         <div class="col s12 l4">
                             <div class="collection">
                                 <a href="#open-help" class="collection-item"><span class="badge" data-badge-caption=""
-                                                                                   id="open">+ $2.95</span>
+                                                                                   id="open">Loading...</span>
                                     Open
                                 </a>
                                 <div id="open-help" class="modal">
@@ -148,7 +147,7 @@
                                 </div>
 
                                 <a href="#close-help" class="collection-item"><span class="badge" data-badge-caption=""
-                                                                                    id="high">- $1.03</span>High
+                                                                                    id="high">Loading...</span>High
                                 </a>
                                 <div id="close-help" class="modal">
                                     <div class="modal-content">
@@ -170,7 +169,7 @@
                                 </div>
 
                                 <a href="#low-help" class="collection-item"><span class="badge" data-badge-caption=""
-                                                                                  id="low">+ $1.73</span>Low
+                                                                                  id="low">Loading...</span>Low
                                 </a>
                                 <div id="low-help" class="modal">
                                     <div class="modal-content">
@@ -192,7 +191,7 @@
                         <div class="col s12 l4">
                             <div class="collection">
                                 <a href="#market-cap-help" class="collection-item"><span class="badge"
-                                                                                         data-badge-caption="" id="cap">+ $2.95</span>Market
+                                                                                         data-badge-caption="" id="cap">Loading...</span>Market
                                     Cap </a>
                                 <div id="market-cap-help" class="modal">
                                     <div class="modal-content">
@@ -215,7 +214,7 @@
                                 </div>
 
                                 <a href="#volume-help" class="collection-item"><span class="badge" data-badge-caption=""
-                                                                                     id="volume">- $1.03</span>Volume
+                                                                                     id="volume">Loading...</span>Volume
                                 </a>
                                 <div id="volume-help" class="modal">
                                     <div class="modal-content">
@@ -238,7 +237,7 @@
                                 </div>
 
                                 <a href="#shares-help" class="collection-item"><span class="badge" data-badge-caption=""
-                                                                                     id="shares">+ $1.73</span>Shares
+                                                                                     id="shares">Loading...</span>Shares
                                 </a>
                                 <div id="shares-help" class="modal">
                                     <div class="modal-content">
@@ -264,7 +263,7 @@
                         <div class="col s12 l4">
                             <div class="collection">
                                 <a href="#range-help" class="collection-item"><span class="badge" data-badge-caption=""
-                                                                                   id="range">+ $2.95</span>Range
+                                                                                   id="range">Loading...</span>Range
                                 </a>
                                 <div id="range-help" class="modal">
                                     <div class="modal-content">
@@ -287,7 +286,7 @@
                                 </div>
                                 <a href="#52-week-high-help" class="collection-item"><span class="badge"
                                                                                           data-badge-caption=""
-                                                                                          id="high52">- $1.03</span>52-week
+                                                                                          id="high52">Loading...</span>52-week
                                     High </a>
                                 <div id="52-week-high-help" class="modal">
                                     <div class="modal-content">
@@ -310,7 +309,7 @@
                                 </div>
                                 <a href="#52-week-low-help" class="collection-item"><span class="badge"
                                                                                          data-badge-caption=""
-                                                                                         id="low52">+ $1.73</span>52-week
+                                                                                         id="low52">Loading...</span>52-week
                                     Low </a>
                                 <div id="52-week-low-help" class="modal">
                                     <div class="modal-content">
@@ -340,7 +339,17 @@
                     <div class="section">
                         <h5>News</h5>
                         <div id="newsCollection" class="collection">
-                            
+                            <div id="news-loader" class="preloader-wrapper big active">
+                                <div class="spinner-layer spinner-blue">
+                                    <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                    </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                    </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -351,7 +360,17 @@
                 </ul>-->
 
                 <div id="twitterFeed" class="collection">
-                
+                <div id="twitter-loader" class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                        <div class="circle"></div>
+                        </div><div class="gap-patch">
+                        <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 
             </div>

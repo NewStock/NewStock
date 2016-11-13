@@ -20,13 +20,16 @@ $(document).ready(function(){
     //console.log("Requesting")
     $.ajax("https://crossorigin.me/http://13.92.28.18/tweets/?tag=$"+stockName).done(function(tweets){
         tweets = tweets.statuses;
+
+        $('#twitter-loader').css({'display':'none'})
         //console.log("Got ajax");
         //tweets = JSON.decode(result).statuses;
         //console.log(tweets)
-        for(var i = 0; i < Math.min(5, tweets.length-1); i++)
+        for(var i = 0; i < Math.min(12, tweets.length); i++)
         {
             tweet = tweets[i];
             console.log(tweet.user.name + " - " + tweet.text);
+            console.log(tweet)
 
             var link = "https://twitter.com/statuses/" + tweet.id_str;
 
